@@ -1,0 +1,9 @@
+/* app css stylesheet */
+
+hr {
+  border-bottom: 1px solid black;
+}
+
+body {
+  margin: 30px;
+}
