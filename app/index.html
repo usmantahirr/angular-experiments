@@ -12,8 +12,7 @@
     <!-- Controller testing  -->
     <p>Nothing here {{'yet' + '!'}}</p>
     <p ng-controller="ngAppDemoController">
-      just added {{a}} + {{b}} which is equal to {{a+b}}.
-      <b>Done it using scops.</b>
+      just added {{a}} + {{b}} which is equal to {{a+b}}. <b>Done it using scops.</b>
     </p><hr>
 
     <!-- Model Testing -->
@@ -32,12 +31,10 @@
     <p>Phonecat</p>
     <ul>
       <li>
-        <span>Nexus S</span>
-        <p>Fast just got faster with Nexus S.</p>
+        <span>Nexus S</span><p>Fast just got faster with Nexus S.</p>
       </li>
       <li>
-        <span>Motorola XOOM™ with Wi-Fi</span>
-        <p>The Next, Next Generation tablet.</p>
+        <span>Motorola XOOM™ with Wi-Fi</span><p>The Next, Next Generation tablet.</p>
       </li>
     </ul><hr>
 
@@ -51,5 +48,15 @@
     <div ng-controller="DoubleController">
       Two times <input ng-model="num"> equals {{ double(num) }}
     </div><hr>
+
+    <!-- Button toggle -->
+    <div ng-controller="SpicyController">
+      <button ng-click="chiliSpicy()">Chili</button>
+      <button ng-click="jalapenoSpicy()">Jalapeño</button>
+      <p>The food is {{spice}} spicy!</p>
+    </div><hr>
+
+    <!--  -->
+
   </body>
 </html>
