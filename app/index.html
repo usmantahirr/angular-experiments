@@ -56,7 +56,14 @@
       <p>The food is {{spice}} spicy!</p>
     </div><hr>
 
-    <!--  -->
+    <!-- Service Test -->
+    <div id="simple" ng-controller="ServiceTest">
+      <p>Let's try this simple notify service, injected into the controller...</p>
+      <input ng-init="message='test'" ng-model="message">
+      <button ng-click="callNotify(message); ">NOTIFY</button>
+      <span>{{ clickCount }}</span>
+      <p>(you have to click 3 times to see an alert)</p>
+    </div><hr>
 
   </body>
 </html>
