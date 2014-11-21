@@ -29,11 +29,12 @@ app.controller('SpicyController', ['$scope', function($scope) {
 
 // Service declaration & Usage
 app.controller('ServiceTest', ['$scope','notify', function ($scope, notify) {
-      $scope.clickCount = 0;
-      $scope.callNotify = function(msg) {
+    $scope.clickCount = 0;
+    $scope.callNotify = function(msg) {
+      $scope.clickCount += 1;
       notify(msg);
     };
-}])
+}]);
 
 // Custom Service
 app.factory('notify', ['$window', function(win) {
