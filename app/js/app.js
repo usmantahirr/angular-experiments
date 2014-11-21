@@ -29,22 +29,20 @@ app.controller('SpicyController', ['$scope', function($scope) {
 
 // Service declaration & Usage
 app.controller('ServiceTest', ['$scope','notify', function ($scope, notify) {
-    $scope.clickCount = 0;
-    $scope.callNotify = function(myMessage) {
-      notify(myMessage,$scope.clickCount);
+      $scope.clickCount = 0;
+      $scope.callNotify = function(msg) {
+      notify(msg);
     };
-}]);
+}])
 
 // Custom Service
 app.factory('notify', ['$window', function(win) {
     var msgs = [];
-    return function(msg, click) {
+    return function(msg) {
       msgs.push(msg);
-      click++;
       if (msgs.length == 3) {
         win.alert(msgs.join("\n"));
         msgs = [];
-        click=0;
       }
     };
 }]);
