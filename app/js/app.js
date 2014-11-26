@@ -47,3 +47,16 @@ app.factory('notify', ['$window', function(win) {
       }
     };
 }]);
+
+// Custom Filter
+app.filter('greet', function($sce){
+  return function(name){
+    return $sce.trustAsHtml("Hello <strong>" + name + "</strong> !!");
+  };
+});
+
+// Value Providor
+app.value('clientId', 'a12345654321x');
+app.controller('VPTest', ['clientId', function VPTest(id) {
+  this.clientId = id;
+}]);
