@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/Bowser/bowser.min.js"></script>
     <script src="js/app.js"></script>
   </head>
   <body>
     <!-- Controller testing  -->
     <p>Nothing here {{'yet' + '!'}}</p>
     <p ng-controller="ngAppDemoController">
-      just added {{a}} + {{b}} which is equal to {{a+b}}. <b>Done it using scops.</b>
+        just added {{aValue}} + {{bValue}} which is equal to {{aValue+bValue}}. <b>Done it using scops.</b>
+
     </p><hr>
 
     <!-- Model Testing -->
@@ -47,6 +49,7 @@
     <!-- Controller Example  -->
     <div ng-controller="DoubleController">
       Two times <input ng-model="num"> equals {{ double(num) }}
+      <p>Browser Version is -> {{browserVersion}} </p>
     </div><hr>
 
     <!-- Button toggle -->

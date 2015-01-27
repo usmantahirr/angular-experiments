@@ -5,13 +5,20 @@
 var app = angular.module('ngAppDemo', []);
 // Controller Usage
 app.controller('ngAppDemoController', function($scope) {
-  $scope.a = 1;
-  $scope.b = 2;
+  $scope.aValue = 1;
+  $scope.bValue = 2;
 });
 
 // Using $scope
 app.controller('DoubleController', ['$scope', function($scope) {
   $scope.double = function(value) { return value * 2; };
+    $scope.browserVersion = bowser.version;
+    if (bowser.webkit) {
+        console.log(bowser.webkit);
+    }
+    if (bowser.version) {
+        console.log(bowser.version);
+    }
 }]);
 
 // Model Updation through controllers
@@ -50,12 +57,12 @@ app.factory('notify', ['$window', function(win) {
 
 // Custom Filter
 app.filter('greet', function($sce){
-  return function(name){
-    return $sce.trustAsHtml("Hello <strong>" + name + "</strong> !!");
-  };
+    return function(name){
+        return $sce.trustAsHtml("Hello <strong>" + name + "</strong> !!");
+    };
 });
 
-// Value Providor
+// Value Provider
 app.value('clientId', 'a12345654321x');
 app.controller('VPTest', ['clientId', function VPTest(id) {
   this.clientId = id;
