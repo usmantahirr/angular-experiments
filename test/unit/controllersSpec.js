@@ -2,7 +2,7 @@
 
 /* jasmine specs for controllers go here */
 
-describe('controllers', function() {
+describe('controllers', function() { 
     describe('PhoneListCtrl', function(){
         var scope, ctrl, $httpBackend;
         // Load our app module definition before each test.
